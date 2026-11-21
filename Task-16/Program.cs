@@ -4,8 +4,9 @@
     {
         static void Main(string[] args)
         {
+            
             Calculator c = new Calculator();
-            Console.WriteLine(c.Calc("1+2", false));
+            Console.WriteLine(c.Calc("((1)+2+2)", true));
         }
     }
 }
