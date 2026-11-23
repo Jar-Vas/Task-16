@@ -7,7 +7,7 @@ namespace Task_16
     internal class Logger
     {
         public readonly string file;
-        public Logger(string file) { this.file = file; }
+        public Logger(string file) { this.file = file; File.WriteAllText(file, ""); }
         public void Info(string message) { Console.WriteLine("Info: " + message); }
         public void Error(string message, Exception? e)
         {
@@ -16,7 +16,7 @@ namespace Task_16
         }
         public void Write(string massage)
         {
-            File.WriteAllText(file, massage + "\n");
+            File.AppendAllText(file, massage + "\n");
         }
     }
 }
